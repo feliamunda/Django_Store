@@ -1,0 +1,8 @@
+input[type="number"]#quantity::-webkit-outer-spin-button, 
+input[type="number"]#quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]#quantity {
+    -moz-appearance: textfield;
+}

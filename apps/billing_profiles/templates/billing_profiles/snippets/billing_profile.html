@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ billing_profile.brand }}</h5>
+        <h6 class="card-subtitle">
+            Terminación {{ billing_profile.last4 }}
+        </h6>
+        {% if billing_profile.default %}
+            <div class="mt-2 text-info">
+                Método de pago principal
+            </div>
+        {% else %}
+            <div class="mt-2">
+                <a href="{% url 'billing_profiles:default' billing_profile.id %}" class="btn btn-warning">Seleccionar Método por Defecto</a>
+                <a href="{% url 'billing_profiles:delete' billing_profile.id %}" class="btn btn-danger">Eliminar</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
